@@ -53,7 +53,7 @@ No issue is creating limit on this module.
 | private\_key\_path | Path to the private ssh key | `string` | `""` | no |
 | project\_name | Name of the project in Packet | `string` | n/a | yes |
 | public\_key | The public key to use | `string` | n/a | yes |
-| tags | Map of tags for resources | `map(string)` | `{}` | no |
+| tags | List of tags for resources | `list(string)` | `[]` | no |
 
 ## Outputs
 

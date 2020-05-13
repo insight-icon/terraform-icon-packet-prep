@@ -9,9 +9,9 @@ variable "create" {
 # Label
 ########
 variable "tags" {
-  description = "Map of tags for resources"
-  type        = map(string)
-  default     = {}
+  description = "List of tags for resources"
+  type        = list(string)
+  default     = []
 }
 
 variable "network_name" {
