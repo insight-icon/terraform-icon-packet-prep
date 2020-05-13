@@ -55,7 +55,7 @@ variable "name" {
   default     = "w3f"
 }
 
-variable "associate_eip" {
+variable "associate_ip" {
   description = "Boolean to determine if you should associate the ip when the instance has been configured"
   type        = bool
   default     = true

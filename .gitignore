@@ -5,7 +5,7 @@
 *.tfstate.backup
 *.tfplan
 .terragrunt-cache/
-.terraform/
+.terraform*
 terraform.tfvars
 
 test/fixtures/keys/*

@@ -50,7 +50,7 @@ data "packet_precreated_ip_block" "this" {
 }
 
 resource "packet_ip_attachment" "this" {
-  count = var.associate_eip && var.create ? 1 : 0
+  count = var.associate_ip && var.create ? 1 : 0
 
   device_id     = packet_device.this.id
   cidr_notation = join("/", [cidrhost(data.packet_precreated_ip_block.this.cidr_notation, 0), "32"])
@@ -61,7 +61,7 @@ module "ansible_service_start" {
   source = "github.com/insight-infrastructure/terraform-aws-ansible-playbook.git?ref=v0.12.0"
   create = var.create
 
-  ip               = join("", split("/", packet_ip_attachment.this.cidr_notation)[0])
+  ip               = split("/", join("", packet_ip_attachment.this.*.cidr_notation))[0]
   user             = "ubuntu"
   private_key_path = var.private_key_path
 

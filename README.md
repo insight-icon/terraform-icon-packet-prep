@@ -41,7 +41,7 @@ No issue is creating limit on this module.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
 | ansible\_hardening | Run hardening roles | `bool` | `false` | no |
-| associate\_eip | Boolean to determine if you should associate the ip when the instance has been configured | `bool` | `true` | no |
+| associate\_ip | Boolean to determine if you should associate the ip when the instance has been configured | `bool` | `true` | no |
 | create | Bool to create | `bool` | `true` | no |
 | keystore\_password | The password to the keystore | `string` | `""` | no |
 | keystore\_path | The path to the keystore | `string` | `""` | no |
