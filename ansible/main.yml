@@ -1,0 +1,6 @@
+- hosts: all
+  roles:
+    - common
+    - { role: "dev-sec.os-hardening", when: ansible_hardening | default(false) | bool }
+    - { role: "dev-sec.ssh-hardening", when: ansible_hardening | default(false) | bool }
+    - insight_infra.icon_prep
